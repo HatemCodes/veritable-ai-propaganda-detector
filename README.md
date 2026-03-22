@@ -1,72 +1,144 @@
 # Veritable: AI Propaganda Detection System
 
-A portfolio prototype inspired by a University of Calgary team presentation project. This repository turns the original system concept into a small working web demo that analyzes a statement for five propaganda indicators and returns a transparent **Propaganda Likelihood Score (0-100)**.
+## 🚀 Live Demo
 
-## Project Background
+👉 https://hatemcodes.github.io/veritable-ai-propaganda-detector/
 
-The original Veritable concept focused on detecting propaganda patterns in news and political language through five major indicators:
+---
 
-- Emotional Manipulation
-- Cherry-Picking
-- False Equivalence
-- Authority Appeal
-- Omission of Context
+## 🧠 Overview
 
-The presentation also proposed a 4-layer architecture:
+**Veritable** is a full-stack prototype designed to detect propaganda-style patterns in political and news language.
 
-1. Input & Preprocessing
-2. AI Analysis Layer
-3. Backend Framework
-4. Visualization Layer
+Originally developed as a University of Calgary team concept, this project was independently extended into a **working web application with both frontend and backend components**, capable of analyzing text and generating an explainable **Propaganda Likelihood Score (0–100)**.
 
-This repository is **not** the original course submission codebase. It is a portfolio prototype I built afterward to demonstrate how the Veritable concept could be represented as a simple interactive web application.
+The system focuses not just on detection, but on **interpretability** — helping users understand *why* a statement may be misleading.
 
-## Features
+---
 
-- Paste in a sentence, claim, or headline
-- Receive a prototype propaganda score from 0-100
-- View breakdowns across five propaganda indicators
-- Read human-readable explanations for triggered signals
-- Explore the project architecture in a lightweight UI
+## ⚙️ Key Features
 
-## Tech Stack
+* 🔍 **Multi-indicator analysis**
 
-- React
-- Vite
-- JavaScript
-- CSS
+  * Emotional manipulation
+  * Cherry-picking
+  * False equivalence
+  * Authority appeal
+  * Omission of context
 
-## How It Works
+* 📊 **Propaganda Likelihood Score (0–100)**
+  Quantifies how strongly propaganda patterns are detected
 
-This prototype uses a transparent **rules-based heuristic engine** rather than a trained ML model.
+* 🧾 **Explainable output**
+  Identifies which linguistic triggers influenced the score
 
-It looks for linguistic patterns associated with:
+* 🌐 **Full-stack architecture**
+  Frontend interface + backend API for analysis
 
-- emotional urgency
-- selective framing
-- vague authority language
-- flattening of moral differences
-- missing context
+---
 
-The result is intended for **explainability and demonstration**, not factual adjudication.
+## 🏗️ System Architecture
 
-## Run Locally
+The system follows a simplified 4-layer architecture:
+
+1. **Preprocessing Layer**
+   Text normalization and tokenization
+
+2. **Analysis Layer (NLP Logic)**
+   Rule-based detection of propaganda patterns
+
+3. **Backend Layer (Flask API)**
+   Handles analysis requests and returns structured results
+
+4. **Frontend Layer (React UI)**
+   Displays scores and explanations interactively
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+
+* React (Vite)
+* JavaScript (ES6)
+* CSS
+
+### Backend
+
+* Python
+* Flask
+* Flask-CORS
+
+---
+
+## 📁 Project Structure
+
+```
+veritable-ai-propaganda-detector/
+│
+├── src/                # Frontend (React)
+├── backend/            # Flask API
+│   ├── app.py
+│   └── requirements.txt
+│
+├── index.html
+├── package.json
+└── README.md
+```
+
+---
+
+## 🧪 Example
+
+**Input:**
+
+> "Experts say this is the only way to save the country."
+
+**Output:**
+
+* Authority appeal detected
+* Emotional framing detected
+* Score: 65/100
+
+---
+
+## ▶️ Running Locally
+
+### Frontend
 
 ```bash
 npm install
 npm run dev
 ```
 
-Then open the local Vite URL shown in your terminal.
+### Backend
 
-## Future Improvements
+```bash
+cd backend
+pip install -r requirements.txt
+python app.py
+```
 
-- Replace keyword heuristics with a trained NLP classifier
-- Add confidence intervals and calibration testing
-- Support article-length input instead of short statements
-- Add dataset documentation and annotation guidelines
-- Build a backend API with persistent analysis history
+---
 
-## Disclaimer
+## 📈 Future Improvements
 
-This tool does **not** determine objective truth and should not be used for censorship, moderation enforcement, or legal decisions. It is a student portfolio prototype for demonstrating explainable system design.
+* Integrate real NLP models (spaCy / transformers)
+* Connect frontend to backend API
+* Expand detection logic with ML
+* Deploy backend service publicly
+* Add dataset-driven evaluation
+
+---
+
+## 🤝 Acknowledgements
+
+This project is based on a team concept developed at the University of Calgary.
+This repository represents an **independent full-stack prototype implementation** expanding that concept.
+
+---
+
+## 👤 Author
+
+**Hatem Chehade**
+Computer Science Student @ University of Calgary
