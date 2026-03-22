@@ -1,12 +1,55 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Veritable Prototype</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Veritable Demo</title>
+</head>
+<body style="font-family: Arial; padding: 40px; background: #0f172a; color: white;">
+
+  <h1>Veritable: AI Propaganda Detection</h1>
+
+  <textarea id="input" rows="6" cols="60" placeholder="Enter text here..."></textarea>
+  <br><br>
+
+  <button onclick="analyze()">Analyze</button>
+
+  <h2 id="result"></h2>
+
+  <script>
+    function analyze() {
+      let text = document.getElementById("input").value.toLowerCase();
+      let score = 0;
+      let triggers = [];
+
+      if (text.includes("danger") || text.includes("crisis")) {
+        score += 20;
+        triggers.push("Emotional manipulation");
+      }
+
+      if (text.includes("experts say")) {
+        score += 15;
+        triggers.push("Authority appeal");
+      }
+
+      if (text.includes("just as")) {
+        score += 15;
+        triggers.push("False equivalence");
+      }
+
+      if (text.includes("study shows")) {
+        score += 20;
+        triggers.push("Cherry-picking");
+      }
+
+      if (text.split(" ").length < 10) {
+        score += 10;
+        triggers.push("Lack of context");
+      }
+
+      document.getElementById("result").innerText =
+        "Score: " + score + "/100\nTriggers: " + triggers.join(", ");
+    }
+  </script>
+
+</body>
 </html>
