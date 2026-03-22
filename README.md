@@ -142,3 +142,8 @@ This repository represents an **independent full-stack prototype implementation*
 
 **Hatem Chehade**
 Computer Science Student @ University of Calgary
+
+## 📸 Demo
+
+<img width="747" height="354" alt="{E030287C-9821-40AC-A38B-0229287DC1EE}" src="https://github.com/user-attachments/assets/1b59cbec-519d-4660-a6d7-e1c4a78e22c9" />
+
